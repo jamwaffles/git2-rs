@@ -84,7 +84,7 @@ fn main() {
         features.push_str("#define GIT_USE_NSEC 1\n");
     }
 
-    if target.contains("apple") {
+    if !target.contains("apple") {
         features.push_str("#define GIT_USE_STAT_MTIMESPEC 1\n");
     } else {
         features.push_str("#define GIT_USE_STAT_MTIM 1\n");
